@@ -1,0 +1,202 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #cccccc;
+}
+#pageContainer {
+  margin: 10px auto;
+  max-width: 90%;
+}
+
+#pageContainer > header {
+  margin: 0;
+  padding: 10px 20px;
+  background-color: #111111;
+  background-image: -moz-linear-gradient(top, #444444, #111111);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#444444), to(#111111));
+  background-image: -webkit-linear-gradient(top, #444444, #111111);
+  background-image: -o-linear-gradient(top, #444444, #111111);
+  background-image: linear-gradient(to bottom, #444444, #111111);
+  background-repeat: repeat-x;
+  border: 1px solid #444444;
+  border-radius: 8px 8px 0 0;
+  -webkit-border-radius: 8px 8px 0 0;
+  -moz-border-radius: 8px 8px 0 0;
+  -o-border-radius: 8px 8px 0 0;
+  -ms-border-radius: 8px 8px 0 0;
+}
+#pageContainer > header .navbar-inner {
+  background: none;
+  border: none;
+}
+#pageContainer > header .navbar-inverse {
+  margin-bottom: 0;
+}
+#pageContainer > header .navbar-inverse .brand,
+#pageContainer > header .navbar-inverse .nav > li > a {
+  color: #cccccc;
+  border-radius: 6px 6px 6px 6px;
+  -webkit-border-radius: 6px 6px 6px 6px;
+  -moz-border-radius: 6px 6px 6px 6px;
+  -o-border-radius: 6px 6px 6px 6px;
+  -ms-border-radius: 6px 6px 6px 6px;
+}
+#pageContainer > header .navbar-inverse .brand:hover,
+#pageContainer > header .navbar-inverse .nav > li > a:hover,
+#pageContainer > header .navbar-inverse .brand:focus,
+#pageContainer > header .navbar-inverse .nav > li > a:focus,
+#pageContainer > header .navbar-inverse .brand:active,
+#pageContainer > header .navbar-inverse .nav > li > a:active {
+  color: #ffffff;
+}
+#pageContainer > section {
+  margin: 0;
+  min-height: 460px;
+  border: solid #444444;
+  border-width: 0 1px 0 1px;
+  background-color: #ffffff;
+}
+#pageContainer > footer {
+  padding: 10px 10px;
+  color: #cccccc;
+  font-size: 0.8em;
+  background-color: #111111;
+  background-image: -moz-linear-gradient(top, #444444, #111111);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#444444), to(#111111));
+  background-image: -webkit-linear-gradient(top, #444444, #111111);
+  background-image: -o-linear-gradient(top, #444444, #111111);
+  background-image: linear-gradient(to bottom, #444444, #111111);
+  background-repeat: repeat-x;
+  border: 1px solid #444444;
+  border-radius: 0 0 8px 8px;
+  -webkit-border-radius: 0 0 8px 8px;
+  -moz-border-radius: 0 0 8px 8px;
+  -o-border-radius: 0 0 8px 8px;
+  -ms-border-radius: 0 0 8px 8px;
+  text-align: right;
+}
+#pageContainer > footer a {
+  color: #cccccc;
+}
+#pageContainer > footer a:hover,
+#pageContainer > footer a:focus,
+#pageContainer > footer a:active {
+  color: #ffffff;
+  text-decoration: none;
+}
+#alertMessageContainer {
+  height: 34px;
+}
+#alertMessageContainer > .alert {
+  display: none;
+}
+#alertMessage > strong {
+  text-transform: capitalize;
+}
+#mainContainer {
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+}
+#mainContainer form label:not(.radio)::after {
+  content: ' : ';
+}
+#mainContainer .uneditable-input {
+  color: #000000;
+}
+#navbarContainer {
+  border-radius: 0 0 0 0;
+  -webkit-border-radius: 0 0 0 0;
+  -moz-border-radius: 0 0 0 0;
+  -o-border-radius: 0 0 0 0;
+  -ms-border-radius: 0 0 0 0;
+}
+#navbarContainer.navbar.navbar-inverse .navbar-inner {
+  background-image: none;
+  background-color: #111111;
+}
+#navbarContainer .navbar-inner {
+  border: none;
+  border-radius: 0 0 0 0;
+  -webkit-border-radius: 0 0 0 0;
+  -moz-border-radius: 0 0 0 0;
+  -o-border-radius: 0 0 0 0;
+  -ms-border-radius: 0 0 0 0;
+  box-shadow: 0 0 0 transparent;
+  -webkit-box-shadow: 0 0 0 transparent;
+  -moz-box-shadow: 0 0 0 transparent;
+  -o-box-shadow: 0 0 0 transparent;
+  -ms-box-shadow: 0 0 0 transparent;
+}
+#navbarContainer a {
+  color: #888888;
+}
+#navbarContainer a:hover,
+#navbarContainer a:active {
+  color: #ffffff;
+}
+#attendees tr:hover {
+  cursor: pointer;
+}
+.clear {
+  clear: both;
+}
+.isValid {
+  color: lawngreen;
+}
+.isNotValid {
+  color: red;
+}
+.welcome {
+  min-height: 400px;
+  width: 100%;
+  background-image: url(/img/training.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  overflow: auto;
+}
+/*Form validation*/
+.css-form input.ng-invalid.ng-dirty {
+  background-color: #FAA2A5;
+}
+.css-form input.ng-valid.ng-dirty {
+  background-color: #78FA89;
+}
+.ngplus-overlay-background {
+  top: 0px;
+  left: 0px;
+  padding-left: 100px;
+  position: absolute;
+  z-index: 10000;
+  height: 100%;
+  width: 100%;
+  background-color: #808080;
+  opacity: 0.2;
+}
+.ngplus-overlay-content {
+  position: absolute;
+  /*border: 1px solid #000;*/
+  /*background-color: #fff;*/
+  font-weight: bold;
+  height: 100px;
+  width: 300px;
+  z-index: 10000;
+  text-align: center;
+}
+/*Optional Animations*/
+.dissolve-animation.ng-hide-remove,
+.dissolve-animation.ng-hide-add {
+  display: inline !important;
+  -webkit-transition: 0.5s linear all;
+  -moz-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+}
+.dissolve-animation.ng-hide-remove.ng-hide-remove-active,
+.dissolve-animation.ng-hide-add {
+  opacity: 1;
+}
+.dissolve-animation.ng-hide-add.ng-hide-add-active,
+.dissolve-animation.ng-hide-remove {
+  opacity: 0;
+}

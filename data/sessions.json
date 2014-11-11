@@ -1,0 +1,26 @@
+[
+  {
+    "code": "SPRI",
+    "company": "VALTECH TRAINING",
+    "duration": "3",
+    "room": "G14",
+    "sessionID": "PAR090921ALD",
+    "site": "Paris - La Défense",
+    "startDate": "2009-09-21T00:00:00+02:00",
+    "title": "Développement avec le Framework Spring",
+    "trainer": "Anne-Lise DUBAS",
+    "type": "inter"
+  },
+  {
+    "code": "PERIB",
+    "company": "VALTECH TRAINING",
+    "duration": "3",
+    "room": "H8",
+    "sessionID": "PAR090922ALD",
+    "site": "Paris - La Défense",
+    "startDate": "2010-09-21T00:00:00+02:00",
+    "title": "Développement avec le Framework Hibernate",
+    "trainer": "Anne-Lise DUBAS",
+    "type": "inter"
+  }
+]

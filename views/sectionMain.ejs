@@ -1,0 +1,15 @@
+<section class="container-fluid">
+    <div class="page-content inset">
+        <div class="row">
+            <div class="col-lg-10">
+                <div data-ng-view class="well"></div>
+            </div>
+            <div id="helper" class="col-lg-2 pull-right" >
+                <p class="bg-info" data-ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}">
+                    {{message}}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<div data-ng-include src="'app/partials/overlay.html'"></div>

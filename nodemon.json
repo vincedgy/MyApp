@@ -1,0 +1,30 @@
+{
+    "restartable": "rs",
+    "ignore": [
+        ".idea/",
+        ".git",
+        "node_modules/**/node_modules",
+        "static/components/"
+    ],
+    "verbose": true,
+    "execMap": {
+        "js": "node --harmony"
+    },
+    "watch": [
+        "api/",
+        "controllers/",
+        "data/",
+        "models/",
+        "styles/",
+        "ws/",
+        "server.js",
+        "routes.js",
+        "utils.js",
+        "config.js",
+        "dbUtils.js"
+    ],
+    "env": {
+        "NODE_ENV": "development"
+    },
+    "ext": "js json"
+}

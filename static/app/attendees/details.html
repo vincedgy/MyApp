@@ -1,0 +1,19 @@
+<h3 ng-show="attendee.attendeeVTID" attendee-title></h3>
+<h3 ng-hide="attendee.attendeeVTID" class="isNotValid">No attendee found for {{attendeeVTID}}</h3>
+
+<div  ng-show="attendee.attendeeVTID">
+    <table class="table table-bordered" ng-show="attendee.attendeeVTID">
+        <tr><th>Attendee ID</th><td>{{attendee.attendeeVTID}}</td></tr>
+        <tr><th>Title ID</th><td>{{attendee.title}}</td></tr>
+        <tr><th>First Name</th><td>{{attendee.firstName}}</td></tr>
+        <tr><th>Last Name</th><td>{{attendee.lastName}}</td></tr>
+        <tr><th>Company</th><td>{{attendee.Company}}</td></tr>
+        <tr><th>Phone</th><td>{{attendee.Phone}}</td></tr>
+        <tr><th>Standard</th><td>{{attendee.Standard}}</td></tr>
+        <tr><th>email</th><td>{{attendee.email}}</td></tr>
+    </table>
+</div>
+<form>
+    <button type="button" class="btn btn btn-success" ng-click="getSessions()">Sessions</button>
+    <button type="button" class="btn btn btn-primary" ng-click="getAttendees()">Back</button>
+</form>

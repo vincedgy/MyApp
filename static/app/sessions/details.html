@@ -1,0 +1,120 @@
+<h3 session-title></h3>
+<h3 data-ng-class='{isNotValid : ! session.sessionID}' data-ng-hide="session.sessionID">Session {{sessionID}} is not
+    valid</h3>
+
+
+<div data-ng-show="session.sessionID">
+    <form role="form" class="form-horizontal" novalidate>
+        <div class="form-group">
+
+            <label class="col-lg-2 control-label" for="session.code">Session code</label>
+
+            <div class="col-lg-10">
+                <input class="form-control" type="text"
+                       id="session.code"
+                       data-ng-model="session.code"
+                       readonly/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg-2 control-label" for="session.type">Type</label>
+
+            <div class="col-lg-10">
+                <input class="form-control" type="text"
+                       id="session.type"
+                       data-ng-model="session.type"
+                       readonly/>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label class="col-lg-2 control-label" for="session.title">Title</label>
+
+            <div class="col-lg-10">
+                <input class="form-control" type="text"
+                       id="session.title"
+                       data-ng-model="session.title"
+                       maxlength="64"
+                       readonly/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg-2 control-label" for="session.company">Company</label>
+
+            <div class="col-lg-10">
+                <input class="form-control" type="text"
+                       id="session.company"
+                       data-ng-model="session.company"
+                       readonly/>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label class="col-lg-2 control-label" for="session.duration">Duration</label>
+
+            <div class="col-lg-10">
+                <input class="form-control"
+                       type="text"
+                       id="session.duration"
+                       data-ng-model="session.duration"
+                       readonly/>
+
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label class="col-lg-2 control-label" for="session.site">Site</label>
+
+            <div class="col-lg-10">
+                <input class="form-control" type="text"
+                       id="session.site"
+                       data-ng-model="session.site"
+                       readonly/>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label class="col-lg-2 control-label" for="session.room">Room</label>
+
+            <div class="col-lg-10">
+                <input class="form-control" type="text"
+                       id="session.room"
+                       data-ng-model="session.room"
+                       readonly/>
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <label class="col-lg-2 control-label" for="session.startDate">Start Date</label>
+
+            <div class="col-lg-10">
+                <input class="form-control" type="text"
+                       id="session.startDate"
+                       data-ng-model="session.startDate"
+                       readonly/>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label class="col-lg-2 control-label" for="session.trainer">Trainer</label>
+
+            <div class="col-lg-10">
+                <input class="form-control" type="text"
+                       id="session.trainer"
+                       data-ng-model="session.trainer"
+                       readonly/>
+            </div>
+
+        </div>
+
+        <div>
+            <button type="button" class="btn btn btn-primary" data-ng-click="getAttendees(session)">Attendees for
+                {{session.code}}
+            </button>
+            <a class="btn btn btn-info" href="#editSession/{{session._id}}" role="button">Edit</a>
+            <a class="btn btn btn-success" href="#session" role="button">Back to sessions</a>
+
+        </div>
+    </form>
+</div>

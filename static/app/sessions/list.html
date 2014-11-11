@@ -1,0 +1,32 @@
+<h3>Training sessions</h3>
+<div>
+    <form>
+        <button class="btn btn btn-primary" data-ng-click="newSession()">New session</button>
+    </form>
+    <br/>
+
+    <!--<div ui-grid="listSessionsGrid" ui-grid-selection></div>-->
+    <table class="table table-bordered table-condensed table-hover">
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Session ID</th>
+            <th>Code</th>
+            <th>Duration</th>
+            <th>Date</th>
+            <th>Site</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr data-ng-repeat="session in sessions" data-ng-click="select(session)" class="repeated-item">
+            <td>{{session.title}}</td>
+            <td>{{session.sessionID}}</td>
+            <td>{{session.code}}</td>
+            <td>{{session.duration}}</td>
+            <td>{{session.startDate}}</td>
+            <td>{{session.site}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>

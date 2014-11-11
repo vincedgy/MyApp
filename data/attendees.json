@@ -1,0 +1,123 @@
+[
+  {
+    "attendeeVTID": "SGLZQMWLHB26764",
+    "company": "SI2M",
+    "directPhn": "01 56 03 34 56",
+    "email": "",
+    "firstName": "Didier",
+    "lastName": "AUFAUVRE",
+    "sessionVTID": "PAR090921ALD",
+    "standardPhn": "01 56 03 34 56",
+    "title": "Monsieur"
+  },
+  {
+    "attendeeVTID": "GNJCTGPKYJ78675",
+    "company": "PLB (CLIENT)",
+    "directPhn": "01 43 34 90 94",
+    "email": "",
+    "firstName": "Ingrid",
+    "lastName": "BARBA",
+    "sessionVTID": "PAR090921ALD",
+    "standardPhn": "01 43 34 90 94",
+    "title": "Madame"
+  },
+  {
+    "attendeeVTID": "WKGSWRVYKV47536",
+    "company": "STERIA",
+    "directPhn": "01 34 88 60 00",
+    "email": "leonard.baumstak@steria.com",
+    "firstName": "Leonhard",
+    "lastName": "BAUMASTARK",
+    "sessionVTID": "PAR090921ALD",
+    "standardPhn": "01 34 88 60 00",
+    "title": "Monsieur"
+  },
+  {
+    "attendeeVTID": "SFVBQGQFVV25164",
+    "company": "FRANCE TELECOM",
+    "directPhn": "",
+    "email": "jeanpierre.coriou@orange-ftgroup.com",
+    "firstName": "Jean-pierre",
+    "lastName": "CORIOU",
+    "sessionVTID": "PAR090922ALD",
+    "standardPhn": "",
+    "title": "Monsieur"
+  },
+  {
+    "attendeeVTID": "12537",
+    "company": "",
+    "directPhn": "",
+    "email": "hkacel@canal-plus.fr",
+    "firstName": "Hakim",
+    "lastName": "KACEL",
+    "sessionVTID": "PAR090922ALD",
+    "standardPhn": "",
+    "title": "Monsieur"
+  },
+  {
+    "attendeeVTID": "SPODTYDSKY20875",
+    "company": "AUBAY",
+    "directPhn": "",
+    "email": "",
+    "firstName": "Hubert",
+    "lastName": "LOUIS",
+    "sessionVTID": "PAR090922ALD",
+    "standardPhn": "",
+    "title": "Monsieur"
+  },
+  {
+    "attendeeVTID": "CKFBKSRQUH67562",
+    "company": "SI2M",
+    "directPhn": "01 56 03 34 56",
+    "email": "",
+    "firstName": "Francis",
+    "lastName": "PAILLARD",
+    "sessionVTID": "PAR090922ALD",
+    "standardPhn": "01 56 03 34 56",
+    "title": "Monsieur"
+  },
+  {
+    "attendeeVTID": "WUUCCMDEZJ42168",
+    "company": "INDEPENDANT",
+    "directPhn": "06 62 62 45 98",
+    "email": "cyrille.quintin@java-ee.fr",
+    "firstName": "Cyrille",
+    "lastName": "QUINTIN",
+    "sessionVTID": "PAR090921ALD",
+    "standardPhn": "06 62 62 45 98",
+    "title": "Monsieur"
+  },
+  {
+    "attendeeVTID": "SKRFCCOEXV27088",
+    "company": "VALTECH AGENCY",
+    "directPhn": "01 41 44 65 30",
+    "email": "",
+    "firstName": "Mourad",
+    "lastName": "SAHI",
+    "sessionVTID": "PAR090921ALD",
+    "standardPhn": "01 41 44 65 30",
+    "title": "Monsieur"
+  },
+  {
+    "attendeeVTID": "QIRBKWWYHL26062",
+    "company": "SI2M",
+    "directPhn": "01 56 03 34 56",
+    "email": "",
+    "firstName": "Fabien",
+    "lastName": "SENECHAL",
+    "sessionVTID": "PAR090921ALD",
+    "standardPhn": "01 56 03 34 56",
+    "title": "Monsieur"
+  },
+  {
+    "attendeeVTID": "GUPGWDBYXS72886",
+    "company": "PEUGEOT CITROEN AUTOMOBILE",
+    "directPhn": "01 30 19 30 00",
+    "email": "michael.thiriet@mpsa.com",
+    "firstName": "Michael",
+    "lastName": "THIRIET",
+    "sessionVTID": "PAR090922ALD",
+    "standardPhn": "01 30 19 30 00",
+    "title": "Monsieur"
+  }
+]

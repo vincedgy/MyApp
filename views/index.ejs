@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html data-ng-app="myApp">
+<head>
+    <% include head.ejs %>
+</head>
+
+<body data-ng-controller="mainCtrl" data-ng-cloak>
+<ng-toast></ng-toast>
+
+<div class="container-fluid" id="pageContainer" >
+    <header>
+        <% include header.ejs %>
+    </header>
+
+    <div id="wrapper">
+        <% include sidebar.ejs %>
+
+        <div id="page-content-wrapper" data-spy="scroll" data-target="#spy">
+            <% include sectionMain.ejs %>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <% include footer.ejs %>
+</footer>
+
+<% include scripts.ejs %>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include head %>
+</head>
+
+<body class="container-fluid">
+<% include header %>
+<main>
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="well">
+                    <div class="alert alert-danger" role="alert">
+                        <h3>Error occured</h3>
+                        <p><%= error.message %></p>
+                        <br/>
+                        <q><%= error.stack %></q>
+                        <br/>
+                        &nbsp;
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="well">
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<% include footer %>
+</body>
+</html>

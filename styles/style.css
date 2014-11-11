@@ -1,0 +1,333 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  padding: 0;
+}
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+body .container {
+  padding-top: 60px;
+}
+#pageContainer {
+  height: 80%;
+}
+.footer {
+  position: absolute;
+  display: block;
+  bottom: 0px;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  z-index: 1000;
+  margin: 0;
+}
+.app-container {
+  width: 100%;
+  height: 100%;
+  min-width: 767;
+  padding-bottom: 60px;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+.badge {
+  margin-top: 0px;
+  padding-left: 8px;
+  margin-bottom: 0px;
+  vertical-align: center;
+  align-items: center;
+}
+#helper p {
+  display: block;
+  position: relative;
+  padding: 45px 15px 15px;
+  margin: 0 -15px 15px;
+}
+/* ------------------------------------------------------- */
+/* Session List */
+/* ------------------------------------------------------- */
+.table-hover tbody tr:hover {
+  color: #4c7fc5;
+  cursor: hand;
+}
+/* ------------------------------------------------------- */
+/* Session details */
+/* ------------------------------------------------------- */
+.isValid {
+  color: lawngreen;
+}
+.isNotValid {
+  color: red;
+}
+/* ------------------------------------------------------- */
+/* Welcome page  */
+/* ------------------------------------------------------- */
+.welcome {
+  min-height: 400px;
+  background-image: url(/img/training.jpg);
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+/* ------------------------------------------------------- */
+/* AngularJS specifics                                     */
+/* ------------------------------------------------------- */
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important;
+}
+/* ------------------------------------------------------- */
+/* ngplus section                                          */
+/* ------------------------------------------------------- */
+.ngplus-overlay-background {
+  top: 0px;
+  left: 0px;
+  padding-left: 100px;
+  position: absolute;
+  z-index: 10000;
+  height: 100%;
+  width: 100%;
+  background-color: #808080;
+  opacity: 0.2;
+}
+.ngplus-overlay-content {
+  position: absolute;
+  font-weight: bold;
+  height: 100px;
+  width: 300px;
+  z-index: 10000;
+  text-align: center;
+}
+/*Optional Animations*/
+.dissolve-animation.ng-hide-remove,
+.dissolve-animation.ng-hide-add {
+  display: inline !important;
+  -webkit-transition: 0.5s linear all;
+  -moz-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+}
+.dissolve-animation.ng-hide-remove.ng-hide-remove-active,
+.dissolve-animation.ng-hide-add {
+  opacity: 1;
+}
+.dissolve-animation.ng-hide-add.ng-hide-add-active,
+.dissolve-animation.ng-hide-remove {
+  opacity: 0;
+}
+/* --------------------------------------------------------- */
+#wrapper {
+  padding-left: 220px;
+  transition: all 0.4s ease 0s;
+  max-height: 800px;
+  padding-bottom: 60px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overflow-style: panner;
+}
+#sidebar-wrapper {
+  margin-top: 60px;
+  margin-left: -220px;
+  left: 220px;
+  width: 220px;
+  background-color: #f0f0f0;
+  background-image: -moz-linear-gradient(top, #2e3e66, #f0f0f0);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2e3e66), to(#f0f0f0));
+  background-image: -webkit-linear-gradient(top, #2e3e66, #f0f0f0);
+  background-image: -o-linear-gradient(top, #2e3e66, #f0f0f0);
+  background-image: linear-gradient(to bottom, #2e3e66, #f0f0f0);
+  background-repeat: repeat-y;
+  border: 2px solid #f0f0f0;
+  position: fixed;
+  height: 100%;
+  overflow: hidden;
+  z-index: 100;
+  transition: all 0.4s ease 0s;
+}
+#wrapper.active {
+  padding-left: 0;
+}
+#wrapper.active #sidebar-wrapper {
+  left: 0;
+}
+#page-content-wrapper {
+  position: relative;
+  padding-right: 20px;
+  top: 60px;
+}
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 220px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sidebar-nav li {
+  line-height: 20px;
+  text-indent: 10px;
+}
+.sidebar-nav li a {
+  color: #f0f0f0;
+  display: block;
+  text-decoration: none;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.sidebar-nav li a span:before {
+  position: absolute;
+  left: 0;
+  color: #25c7f6;
+  text-align: center;
+  width: 20px;
+  line-height: 18px;
+}
+.sidebar-nav li a:hover,
+.sidebar-nav li.active {
+  background: #2e3e66;
+  color: #25c7f6;
+  text-decoration: none;
+}
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+  background: #2e3e66;
+}
+.sidebar-nav > .sidebar-brand {
+  line-height: 40px;
+  font-size: 18px;
+}
+.sidebar-nav > .sidebar-brand a {
+  color: #25c7f6;
+}
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #f0f0f0;
+  background: #2e3e66;
+}
+#menu-toggle {
+  text-decoration: none;
+}
+.inset {
+  padding: 0px;
+}
+/* If short screen */
+@media (max-width: 980px) {
+  #wrapper {
+    padding-left: 0;
+  }
+  #sidebar-wrapper {
+    left: 0;
+  }
+  #wrapper.active {
+    position: relative;
+    left: 220px;
+  }
+  #wrapper.active #sidebar-wrapper {
+    left: 220px;
+    width: 220px;
+    transition: all 0.4s ease 0s;
+  }
+  #menu-toggle {
+    display: inline-block;
+  }
+  #helper {
+    display: none;
+    position: relative;
+    padding: 45px 15px 15px;
+    margin: 0 -15px 15px;
+  }
+  .inset {
+    padding: 15px;
+  }
+}
+@media (max-height: 736px) {
+  .footer {
+    display: none;
+  }
+}
+/*
+ We're using CSS transitions for when
+ the enter and move events are triggered
+ for the element that has the .repeated-item
+ class
+*/
+.repeated-item.ng-enter,
+.repeated-item.ng-move {
+  -webkit-transition: 0.5s linear all;
+  -moz-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+  opacity: 0;
+}
+/*
+The ng-enter-active and ng-move-active
+are where the transition destination properties
+are set so that the animation knows what to
+animate.
+*/
+.repeated-item.ng-enter.ng-enter-active,
+.repeated-item.ng-move.ng-move-active {
+  opacity: 1;
+}
+/*
+ We're using CSS keyframe animations for when
+ the leave event is triggered for the element
+ that has the .repeated-item class
+*/
+.repeated-item.ng-leave {
+  -webkit-animation: 0.5s my_animation;
+  -moz-animation: 0.5s my_animation;
+  -o-animation: 0.5s my_animation;
+  animation: 0.5s my_animation;
+}
+@keyframes my_animation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/*
+ Unfortunately each browser vendor requires
+ its own definition of keyframe animation code...
+*/
+@-webkit-keyframes my_animation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-moz-keyframes my_animation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-o-keyframes my_animation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/*----------------------------------------------*/
+.animate-enter {
+  -webkit-transition: 1s linear all;
+  /* Chrome */
+  transition: 1s linear all;
+  opacity: 0;
+}
+.animate-enter.animate-enter-active {
+  opacity: 1;
+}

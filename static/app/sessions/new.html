@@ -1,0 +1,139 @@
+<h3 data-ng-hide="editMode">Create a new session</h3>
+<h3 data-ng-show="editMode">Edit session [{{session.sessionID}}]</h3>
+<p>Please fil up this form, which will assist your entry</p>
+
+<form role="form" class="form-horizontal" novalidate>
+    <div class="form-group">
+
+        <label class="col-lg-2 control-label" for="session.sessionID">Session ID</label>
+
+        <div class="col-lg-10">
+            <input class="form-control" type="text"
+                   id="session.sessionID"
+                   data-ng-model="session.sessionID"
+                   placeholder="New session ID, must be unique"
+                   required/>
+        </div>
+    </div>
+
+    <div class="form-group">
+
+        <label class="col-lg-2 control-label" for="session.code">Session code</label>
+
+        <div class="col-lg-10">
+            <input class="form-control" type="text"
+                   id="session.code"
+                   data-ng-model="session.code"
+                   placeholder="New session code"
+                   required/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-lg-2 control-label" for="session.type">Type</label>
+
+        <div class="col-lg-10">
+            <input class="form-control" type="text"
+                   id="session.type"
+                   data-ng-model="session.type"
+                   placeholder="Select the session type"
+                   required/>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <label class="col-lg-2 control-label" for="session.title">Title</label>
+
+        <div class="col-lg-10">
+            <input class="form-control" type="text"
+                   id="session.title"
+                   data-ng-model="session.title"
+                   placeholder="Select session title"
+                   maxlength="64"
+                   required/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-lg-2 control-label" for="session.company">Company</label>
+
+        <div class="col-lg-10">
+            <input class="form-control" type="text"
+                   id="session.company"
+                   data-ng-model="session.company"
+                   placeholder="Company which organizes the session"
+                   required/>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <label class="col-lg-2 control-label" for="session.duration">Duration</label>
+
+        <div class="col-lg-10">
+            <input class="form-control"
+                   type="number"
+                   min="1"
+                   max="10"
+                   id="session.duration"
+                   data-ng-model="session.duration"
+                   placeholder="Duration in days"
+                   required/>
+
+        </div>
+
+    </div>
+    <div class="form-group">
+        <label class="col-lg-2 control-label" for="session.site">Site</label>
+
+        <div class="col-lg-10">
+            <input class="form-control" type="text"
+                   id="session.site"
+                   data-ng-model="session.site"
+                   placeholder="Choose the site"
+                   required/>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <label class="col-lg-2 control-label" for="session.room">Room</label>
+
+        <div class="col-lg-10">
+            <input class="form-control" type="text"
+                   id="session.room"
+                   data-ng-model="session.room"
+                   placeholder="Choose the room for the selected site"
+                   required/>
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        <label class="col-lg-2 control-label" for="session.startDate">Start Date</label>
+
+        <div class="col-lg-10">
+            <input class="form-control" type="date"
+                   id="session.startDate"
+                   data-ng-model="session.startDate"
+                   placeholder="Choose the starting date"
+                   required/>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <label class="col-lg-2 control-label" for="session.trainer">Trainer</label>
+
+        <div class="col-lg-10">
+            <input class="form-control" type="text"
+                   id="session.trainer"
+                   data-ng-model="session.trainer"
+                   placeholder="Select the trainer"
+                   required/>
+        </div>
+
+    </div>
+
+    <div>
+        <button class="btn btn btn-primary" data-ng-click="getSessions()">Back</button>
+        <button class="btn btn btn-warning" data-ng-click="saveSession(session)">Save</button>
+        <button class="btn btn btn-danger" data-ng-click="removeSession(session)">Remove</button>
+        <button class="btn btn btn" data-ng-click="cancel()">Cancel</button>
+    </div>
+</form>
