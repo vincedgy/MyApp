@@ -1,76 +1,74 @@
-<h3 ng-show="attendee.attendeeVTID" attendee-title></h3>
-<h3 ng-hide="attendee.attendeeVTID" class="isNotValid">No attendee found for {{attendeeVTID}}</h3>
+<h3 data-ng-hide="editMode">Create a new person</h3>
+<h3 data-ng-show="editMode">Editing person [{{attendee._id}}]</h3>
+<p>Please fil up this form, which will assist your entry</p>
 
-<div ng-show="attendee.attendeeVTID">
+<form role="form" class="form-horizontal" novalidate>
+    <div class="form-group">
+        <label class="col-lg-2 control-label" for="attendee.attendeeVTID">AttendeeVTID</label>
 
-    <form role="form" class="form-horizontal" novalidate>
-        <div class="form-group">
-            <label class="col-lg-2 control-label" for="attendee.attendeeVTID">AttendeeVTID</label>
-
-            <div class="col-lg-10">
-                <input class="form-control" type="text"
-                       id="attendee.attendeeVTID"
-                       data-ng-model="attendee.attendeeVTID"/>
-            </div>
+        <div class="col-lg-10">
+            <input class="form-control" type="text"
+                   id="attendee.attendeeVTID"
+                   data-ng-model="attendee.attendeeVTID"/>
         </div>
-        <div class="form-group">
-            <label class="col-lg-2 control-label" for="attendee.title">Titre</label>
+    </div>
+    <div class="form-group">
+        <label class="col-lg-2 control-label" for="attendee.title">Titre</label>
 
-            <div class="col-lg-10">
-                <input class="form-control" type="text"
-                       id="attendee.title"
+        <div class="col-lg-10">
+            <input class="form-control" type="text"
+                   id="attendee.title"
                    data-ng-model="attendee.title"/>
-            </div>
         </div>
-        <div class="form-group">
-            <label class="col-lg-2 control-label" for="attendee.firstName">First Name</label>
+    </div>
+    <div class="form-group">
+        <label class="col-lg-2 control-label" for="attendee.firstName">First Name</label>
 
-            <div class="col-lg-10">
-                <input class="form-control" type="text"
-                       id="attendee.firstName"
-                       data-ng-model="attendee.firstName"/>
-            </div>
+        <div class="col-lg-10">
+            <input class="form-control" type="text"
+                   id="attendee.firstName"
+                   data-ng-model="attendee.firstName"/>
         </div>
-        <div class="form-group">
-            <label class="col-lg-2 control-label" for="attendee.lastName">Last Name</label>
+    </div>
+    <div class="form-group">
+        <label class="col-lg-2 control-label" for="attendee.lastName">Last Name</label>
 
-            <div class="col-lg-10">
-                <input class="form-control" type="text"
-                       id="attendee.lastName"
-                       data-ng-model="attendee.lastName"/>
-            </div>
+        <div class="col-lg-10">
+            <input class="form-control" type="text"
+                   id="attendee.lastName"
+                   data-ng-model="attendee.lastName"/>
         </div>
-        <div class="form-group">
-            <label class="col-lg-2 control-label" for="attendee.Company">attendee.Company</label>
+    </div>
+    <div class="form-group">
+        <label class="col-lg-2 control-label" for="attendee.Company">Company</label>
 
-            <div class="col-lg-10">
-                <input class="form-control" type="text"
-                       id="attendee.Company"
-                       data-ng-model="attendee.Company"/>
-            </div>
+        <div class="col-lg-10">
+            <input class="form-control" type="text"
+                   id="attendee.company"
+                   data-ng-model="attendee.company"/>
         </div>
-        <div class="form-group">
-            <label class="col-lg-2 control-label" for="attendee.Phone">Phone</label>
+    </div>
+    <div class="form-group">
+        <label class="col-lg-2 control-label" for="attendee.Phone">Phone</label>
 
-            <div class="col-lg-10">
-                <input class="form-control" type="text"
-                       id="attendee.Phone"
-                       data-ng-model="attendee.Phone"/>
-            </div>
+        <div class="col-lg-10">
+            <input class="form-control" type="text"
+                   id="attendee.phone"
+                   data-ng-model="attendee.phone"/>
         </div>
-        <div class="form-group">
-            <label class="col-lg-2 control-label" for="attendee.email">Email</label>
+    </div>
+    <div class="form-group">
+        <label class="col-lg-2 control-label" for="attendee.email">Email</label>
 
-            <div class="col-lg-10">
-                <input class="form-control" type="text"
-                       id="attendee.email"
-                       data-ng-model="attendee.email"/>
-            </div>
+        <div class="col-lg-10">
+            <input class="form-control" type="text"
+                   id="attendee.email"
+                   data-ng-model="attendee.email"/>
         </div>
+    </div>
 
-        <button class="btn btn btn-primary" data-ng-click="getAttendees(attendee)">Back</button>
-        <button class="btn btn btn-warning" data-ng-click="saveAttendee(attendee)">Save</button>
-        <button class="btn btn btn-danger" data-ng-click="removeAttendee(attendee)">Remove</button>
-        <button class="btn btn btn" data-ng-click="cancel()">Cancel</button>
-    </form>
-</div>
+    <button class="btn btn btn-primary" data-ng-click="getAttendees(attendee)">Back</button>
+    <button class="btn btn btn-warning" data-ng-click="saveAttendee(attendee)">Save</button>
+    <button ng-show="attendee._id" class="btn btn btn-danger" data-ng-click="removeAttendee(attendee)">Remove</button>
+    <button class="btn btn btn" data-ng-click="cancel()">Cancel</button>
+</form>

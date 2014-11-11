@@ -19,6 +19,7 @@
         , 'myApp.controllers'
         , 'myApp.attendeesListCtrl', 'myApp.attendeeCtrl'
         , 'myApp.sessionsListCtrl', 'myApp.sessionCtrl'
+        , 'myApp.addAttendeesCtrl'
         , 'myApp.SessionSrv', 'myApp.attendeesServices'
         , 'myApp.directives'
         , 'myApp.filters'
@@ -38,8 +39,10 @@
                     // Session API
                     ,'sessions': '/session'
                     ,'session': '/session/:_id'
+                    ,'sessionBySessionID': '/sessionBSI/:sessionID'
                     ,'newSession': '/newSession'
                     ,'editSession': '/editSession/:_id'
+                    ,'addAttendees': '/session/:_id/addAttendees'
 
                     // Attendee API
                     ,'attendees': '/attendee'
@@ -49,10 +52,10 @@
                     ,'editAttendee': '/editAttendee/:_id'
                 },
                 'views': {
-                    'partials': 'partials/',
-                    'layout': 'layout/',
-                    'sessions': 'sessions/',
-                    'attendees': 'attendees/'
+                    'partials': 'partials/'
+                    ,'layout': 'layout/'
+                    ,'sessions': 'sessions/'
+                    ,'attendees': 'attendees/'
                 }}
         })
 
@@ -81,6 +84,10 @@
                 templateUrl: config.dirs.base + config.dirs.views.partials + 'about.html',
                 controller: 'helloCtrl'
             }).
+
+            // ---------------------------------------------------------
+            // Sessions routes
+
             when(config.dirs.api.sessions, {
                 templateUrl: config.dirs.base + config.dirs.views.sessions + 'list.html',
                 controller: 'sessionsListCtrl'
@@ -97,6 +104,11 @@
                 templateUrl: config.dirs.base + config.dirs.views.sessions + 'details.html',
                 controller: 'sessionCtrl'
             }).
+            when(config.dirs.api.addAttendees, {
+                templateUrl: config.dirs.base + config.dirs.views.sessions + 'addAttendees.html',
+                controller: 'addAttendeesCtrl'
+            }).
+            // ---------------------------------------------------------
             // Attendees routes
             when(config.dirs.api.attendees, {
                 templateUrl: config.dirs.base + config.dirs.views.attendees + 'list.html',

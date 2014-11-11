@@ -9,7 +9,6 @@ var Attendee = require('../models/AttendeeSchema');
 module.exports = function (req, res) {
     var attendee = req.body || null;
     if (attendee) {
-        //var db = dbUtils.open();
         // Creation
         if (! attendee._id) {
             var newAttendee = new Attendee();
@@ -34,7 +33,7 @@ module.exports = function (req, res) {
         }
         // Update
         else {
-            Session.findById(attendee._id, function(err, existingAttendee) {
+            Attendee.findById(attendee._id, function(err, existingAttendee) {
                 if (err) return handleError(err);
                 existingAttendee.attendeeVTID = attendee.attendeeVTID || '';
                 existingAttendee.company = attendee.company || '';

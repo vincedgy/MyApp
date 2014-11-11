@@ -1,0 +1,60 @@
+<h3>Add/Remove attendees for session {{session.sessionID}}</h3>
+
+
+    <form role="form" class="form-horizontal" novalidate>
+
+        <div class="row">
+            <div class="col-lg-2">
+                <label for="availableAttendees">Available attendees</label>
+                <select size="10" multiple
+                        class="form-control"
+                        id="availableAttendees"
+                        ng-model="available"
+                        ng-options="attendee as attendee.firstName + ' ' + attendee.lastName for attendee in attendeesAvailable">
+                </select>
+            </div>
+
+            <div class="col-lg-2">
+                <button id="moveright"
+                        type="button"
+                        class="btn btn-default btn-md"
+                        data-ng-click="moveItem(available[0], attendeesAvailable, attendeesOfSession)">
+                    <span class="glyphicon glyphicon-arrow-right"></span>
+                </button>
+                <!--<input id="moverightall" type="button" value="Add All Clients" ng-click="moveAll(availableclients,selectedclients)" />-->
+
+                <button id="moveleft"
+                        type="button"
+                        class="btn btn-default btn-md"
+                        data-ng-click="moveItem(selected[0], attendeesOfSession, attendeesAvailable)">
+                    <span class="glyphicon glyphicon-arrow-left"></span>
+                </button>
+                <!--<input id="moveleftall" type="button" value="Remove All Clients" ng-click="moveAll(selectedclients,availableclients)" />-->
+
+            </div>
+
+            <div class="col-lg-2">
+                <label for="inSessionAttendees">Session's attendees</label>
+                <select size="10" multiple
+                        class="form-control"
+                        id="inSessionAttendees"
+                        ng-model="selected"
+                        ng-options="attendee as attendee.firstName + ' ' + attendee.lastName for attendee in attendeesOfSession">
+                </select>
+
+            </div>
+
+            <!--<div>-->
+            <!--<div>Selected: {{selected}}</div>-->
+            <!--<div>Available: {{available}}</div>-->
+            <!--</div>-->
+
+        </div>
+
+        <div class="row">
+            <div class="input-group">
+                <button class="btn btn btn-warning" data-ng-click="save()">Save</button>
+                <button class="btn btn btn" data-ng-click="cancel()">Cancel</button>
+            </div>
+        </div>
+    </form>

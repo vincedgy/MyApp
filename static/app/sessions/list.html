@@ -9,6 +9,7 @@
     <table class="table table-bordered table-condensed table-hover">
         <thead>
         <tr>
+            <th>#</th>
             <th>Title</th>
             <th>Session ID</th>
             <th>Code</th>
@@ -19,6 +20,7 @@
         </thead>
         <tbody>
         <tr data-ng-repeat="session in sessions" data-ng-click="select(session)" class="repeated-item">
+            <td>{{$index + 1}}</td>
             <td>{{session.title}}</td>
             <td>{{session.sessionID}}</td>
             <td>{{session.code}}</td>

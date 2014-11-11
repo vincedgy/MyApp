@@ -50,6 +50,9 @@ module.exports = function(express,config, app) {
     router.get('/api/session',require(path.join(config.apiDir, 'sessions.js')));
     // Get one session
     router.get('/api/session/:id',require(path.join(config.apiDir, 'sessionById.js')));
+    // Get one session by sessionID
+    router.get('/api/sessionBSI/:sessionID',require(path.join(config.apiDir, 'sessionBySessionID.js')));
+
     // Create one session
     router.post('/api/session',require(path.join(config.apiDir, 'saveSession.js')));
     // Save one existing session

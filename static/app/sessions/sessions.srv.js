@@ -12,5 +12,11 @@
                     remove: {method: 'DELETE', params: {_id: '@id'}}
                 });
         }
+        ])
+        .factory('SessionBySessionId', ['$resource', 'config', function ($resource, config) {
+            return $resource(
+                    config.dirs.api.prefix + config.dirs.api.sessionBySessionID,
+                {sessionID: '@sessionID'});
+        }
         ]);
 })();

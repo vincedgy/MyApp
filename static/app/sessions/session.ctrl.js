@@ -4,7 +4,7 @@
     angular.module('myApp.sessionCtrl', ['myApp.SessionSrv'])
             .controller('sessionCtrl', ['$scope', '$location', '$routeParams', 'SessionSrv', 'config', function ($scope, $location, $routeParams, SessionSrv, config) {
 
-                var passedId = $routeParams._id || '';
+                var passedId = $routeParams._id || undefined;
 
                 $scope.session = {};
                 $scope.isValid = false;
@@ -40,7 +40,7 @@
                 };
 
                 $scope.removeSession = function (session) {
-                    if (confirm('Please confirm session ' + session.sessionID + ' deletion.')) {
+                    if (session._id && confirm('Please confirm session ' + session.sessionID + ' deletion.')) {
                         session.$remove({_id: session._id}, function(removedSession) {
                             $location.url('/session/');
                         });
