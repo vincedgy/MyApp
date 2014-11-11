@@ -1,13 +1,7 @@
-/**
- * Created by Vincent on 01/11/2014.
- */
 (function () {
     'use strict';
 
-    /* controllers */
-
-    var sessionCtrl =
-        angular.module('myApp.sessionCtrl', ['myApp.SessionSrv'])
+    angular.module('myApp.sessionCtrl', ['myApp.SessionSrv'])
             .controller('sessionCtrl', ['$scope', '$location', '$routeParams', 'SessionSrv', 'config', function ($scope, $location, $routeParams, SessionSrv, config) {
 
                 var passedId = $routeParams._id || '';
@@ -27,8 +21,8 @@
                 };
 
                 // Got to attendees list for this session
-                $scope.getAttendees = function (session) {
-                    $location.url('/session/' + session.sessionID + '/attendees');
+                $scope.getAttendeesBySession = function (session) {
+                    $location.url('/session/' + session.sessionID + '/attendee');
                 };
 
                 $scope.saveSession = function (session) {

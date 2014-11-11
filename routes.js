@@ -45,20 +45,32 @@ module.exports = function(express,config, app) {
 //    });
 
     /** API **/
-    router.get('/api/session',
-        require(path.join(config.apiDir, 'sessions.js')));
-    router.get('/api/session/:id',
-        require(path.join(config.apiDir, 'sessionById.js')));
-    router.get('/api/session/:id/attendees',
-        require(path.join(config.apiDir, 'attendeesById.js')));
-    router.get('/api/session/:id/attendees/:attId',
-        require(path.join(config.apiDir, 'attendeesByAttId.js')));
-    router.post('/api/session',
-        require(path.join(config.apiDir, 'saveSession.js')));
-    router.put('/api/session/:id',
-        require(path.join(config.apiDir, 'saveSession.js')));
-    router.delete('/api/session/:id',
-        require(path.join(config.apiDir, 'deleteSession.js')));
+
+    // Get all sessions
+    router.get('/api/session',require(path.join(config.apiDir, 'sessions.js')));
+    // Get one session
+    router.get('/api/session/:id',require(path.join(config.apiDir, 'sessionById.js')));
+    // Create one session
+    router.post('/api/session',require(path.join(config.apiDir, 'saveSession.js')));
+    // Save one existing session
+    router.put('/api/session/:id',require(path.join(config.apiDir, 'saveSession.js')));
+    // Delete one existing session
+    router.delete('/api/session/:id',require(path.join(config.apiDir, 'deleteSession.js')));
+
+    // Get all attendees
+    router.get('/api/attendee',require(path.join(config.apiDir, 'attendees.js')));
+    // Get all attendees of one session
+    router.get('/api/session/:id/attendee',require(path.join(config.apiDir, 'attendeesBySessionId.js')));
+    // Get one attendee of one session
+    router.get('/api/session/:id/attendee/:attId',require(path.join(config.apiDir, 'attendeesByAttId.js')));
+    // Get one attendee
+    router.get('/api/attendee/:id',require(path.join(config.apiDir, 'attendeeById.js')));
+    // Create one attendee
+    router.post('/api/attendee',require(path.join(config.apiDir, 'saveAttendee.js')));
+    // Save one existing attendee
+    router.put('/api/attendee/:id',require(path.join(config.apiDir, 'saveAttendee.js')));
+    // Delete one existing attendee
+    router.delete('/api/attendee/:id',require(path.join(config.apiDir, 'deleteAttendee.js')));
 
     router.get('*', function(req, res, next) {
         var err = new Error();

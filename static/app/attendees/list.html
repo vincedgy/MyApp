@@ -1,7 +1,27 @@
-<h2>Training session attendees</h2>
+<h2>People</h2>
 
-<div ui-grid="listAttendeesGrid" ui-grid-selection></div>
+<div>
 
-<form>
-    <button type="button" class="btn btn btn-success" ng-click="gotoSessions()">Cancel</button>
-</form>
+    <table class="table table-bordered table-condensed table-hover">
+        <thead>
+        <tr>
+            <th>Company</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>email</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr data-ng-repeat="attendee in attendees" data-ng-click="select(attendee)" class="repeated-item">
+            <td>{{attendee.company}}</td>
+            <td>{{attendee.firstName}}</td>
+            <td>{{attendee.lastName}}</td>
+            <td><a href="mailto:{{attendee.email}}">{{attendee.email}}</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <form>
+        <a class="btn btn btn-info" href="#session" role="button">Back to sessions</a>
+    </form>
+</div>

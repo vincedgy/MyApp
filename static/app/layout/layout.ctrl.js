@@ -2,10 +2,10 @@
     'use strict';
 
     /* controllers */
-    var controllers = angular.module('myApp.controllers', []);
+    angular.module('myApp.controllers', [])
 
     // headerCtrl
-    controllers.controller('headerCtrl', ['$scope', '$location', function ($scope, $location) {
+    .controller('headerCtrl', ['$scope', '$location', function ($scope, $location) {
         $scope.currentLocation = null;
         $scope.isActive = function (viewLocation) {
             if (!$scope.currentLocation) {
@@ -15,17 +15,17 @@
             return simpleLocation.toLowerCase().indexOf(viewLocation) >= 0;
         }
 
-    }]);
+    }])
 
     // footerCtrl
-    controllers.controller('footerCtrl', ['$rootScope', '$scope', '$location', function ($rootScope, $scope, $location) {
+    .controller('footerCtrl', ['$rootScope', '$scope', '$location', function ($rootScope, $scope, $location) {
         $rootScope.$on('$locationChangeSuccess', function (event) {
             $scope.actualLocation = $location.path();
         })
-    }]);
+    }])
 
     // mainCtrl
-    controllers.controller('mainCtrl', ['$scope', 'ngToast', 'SessionSrv', function ($scope, ngToast, SessionSrv) {
+    .controller('mainCtrl', ['$scope', 'ngToast', 'SessionSrv', 'Attendee', function ($scope, ngToast, SessionSrv, Attendee) {
         $scope.helloMessage = 'Hello World !';
         $scope.message = 'Please welcome to session management';
         // TEST
@@ -49,10 +49,24 @@
         });
         $scope.eventRefreshNBSession = true;
 
-    }]);
+        // Nb Attendees
+        $scope.nbAttendees = 0;
+        $scope.eventRefreshNBAttendees = false;
+        $scope.$watch('eventRefreshNBAttendees', function() {
+            if ($scope.eventRefreshNBAttendees) {
+                Attendee.query().$promise.then(function (data) {
+                    $scope.nbAttendees = data.length;
+                });
+            }
+            $scope.eventRefreshNBAttendees = false;
+        });
+        $scope.eventRefreshNBAttendees = true;
+
+
+    }])
 
     // helloCtrl
-    controllers.controller('helloCtrl', ['$scope', function ($scope) {
+    .controller('helloCtrl', ['$scope', function ($scope) {
         $scope.helloMessage = 'Hello World !';
     }]);
 
