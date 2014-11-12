@@ -25,22 +25,22 @@ This are the extra tools needed in order to use and develop this app :
 - bower
 - gulp
 
+## Set proxy for http et https :
 
-## git :
+For npm
+```js
+npm config set proxy http://proxy.company.com:8080
+npm config set https-proxy http://proxy.company.com:8080
+```
 
-
-Set proxy for http et https :
-
+For git
 ```js
 git config --global http.proxy "http://user:password@proxy:tcp"
 git config --global https.proxy "http://user:password@proxy:tcp"
 ```
 
-## bower :
-
-Create .bowerrc in static and add proxy settings as well
-
-static/.bowerrc :
+For bower
+-> Create .bowerrc in static and add proxy settings as well
 
 ```js
 {
